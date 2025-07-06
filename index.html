@@ -1037,4 +1037,47 @@ document.addEventListener('click', function(event) {
 </section>
 <button id="scrollToTop" title="إلى الأعلى">↑</button>
 </body>
+<!-- زر الرجوع لأعلى -->
+<button id="scrollToTop" title="رجوع للأعلى">↑</button>
+
+<style>
+#scrollToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #0ec9f2;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: opacity 0.3s ease;
+}
+#scrollToTop:hover {
+  background-color: #0aa4c3;
+}
+</style>
+
+<script>
+  const scrollBtn = document.getElementById("scrollToTop");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 200) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  });
+
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
 </html>
