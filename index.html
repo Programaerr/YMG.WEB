@@ -988,7 +988,14 @@ document.addEventListener('click', function(event) {
     toggleFilterPanel();
   }
 });
-   
+   document.querySelector('a[href="#about"]').addEventListener('click', function() {
+  // إخفاء الفلتر
+  const filter = document.getElementById('filter'); // استبدل 'filter' بالمعرف الصحيح للفلتر
+  if (filter) {
+    filter.classList.remove('active'); // أو filter.style.display = 'none';
+  }
+  // التمرير يتم تلقائياً بسبب href="#about"
+}); 
   </script>
 <section id="about" style="padding: 40px 20px; background-color: #000000;">
   <div style="max-width: 800px; margin: auto; text-align: center;">
