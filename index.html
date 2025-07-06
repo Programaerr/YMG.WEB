@@ -19,6 +19,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>YMBG</title>
   <style>
+#scrollToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: #0ec9f2;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: none; /* مخفي افتراضيًا */
+  transition: opacity 0.3s ease;
+}
+
+#scrollToTop:hover {
+  background-color: #0bb3d9;
+}
  /* فلتر متكامل مع تحسيناتك */
 /* فلتر محسّن */
 .filter-toggle-btn {
@@ -988,6 +1007,24 @@ document.addEventListener('click', function(event) {
     toggleFilterPanel();
   }
 });
+const scrollToTopBtn = document.getElementById("scrollToTop");
+
+// أظهر الزر عندما يتم التمرير لأسفل
+window.onscroll = function() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    scrollToTopBtn.style.display = "block";
+  } else {
+    scrollToTopBtn.style.display = "none";
+  }
+};
+
+// عند الضغط، ارجع لأعلى الصفحة بسلاسة
+scrollToTopBtn.onclick = function() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+};
   </script>
 <section id="about" style="padding: 40px 20px; background-color: #000000;">
   <div style="max-width: 800px; margin: auto; text-align: center;">
@@ -1000,5 +1037,6 @@ document.addEventListener('click', function(event) {
     </p>
   </div>
 </section>
+<button id="scrollToTop" title="إلى الأعلى">↑</button>
 </body>
 </html>
