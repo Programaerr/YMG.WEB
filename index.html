@@ -19,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>YMBG</title>
   <style>
- #scrollToTop {
+#scrollToTop {
   display: none;
   position: fixed;
   bottom: 20px;
@@ -28,22 +28,23 @@
   background-color: #0ec9f2;
   color: black; /* لون السهم */
   border: none;
-  padding: 10px 12px; /* حجم مضغوط */
+  width: 48px;
+  aspect-ratio: 1 / 1; /* يجعل الزر دائري تمامًا */
   border-radius: 50%;
   font-size: 22px;
   cursor: pointer;
-  box-shadow: 0 0 15px #0ec9f2; /* توهج بنفس اللون */
+  box-shadow: 0 0 12px #0ec9f2; /* توهج دائم */
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 #scrollToTop:hover {
   background-color: #0aa4c3;
-  box-shadow: 0 0 20px #0aa4c3; /* توهج أقوى عند التحويم */
+  box-shadow: 0 0 18px #0aa4c3; /* توهج أقوى عند التحويم */
 }
 
 @media (max-width: 768px) {
   #scrollToTop {
-    padding: 8px 10px;
+    width: 40px;
     font-size: 18px;
   }
 }
