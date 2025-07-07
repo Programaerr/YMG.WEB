@@ -20,6 +20,7 @@
   <title>YMBG</title>
   <style>
 #scrollToTop {
+  display: none; /* مخفي افتراضيًا */
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -31,13 +32,19 @@
   border-radius: 50%;
   font-size: 24px;
   cursor: pointer;
-  display: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
   transition: background-color 0.3s ease;
 }
 
 #scrollToTop:hover {
   background-color: #0aa4c3;
+}
+
+@media (max-width: 768px) {
+  #scrollToTop {
+    padding: 10px 14px;
+    font-size: 20px;
+  }
 }
  /* فلتر متكامل مع تحسيناتك */
 /* فلتر محسّن */
