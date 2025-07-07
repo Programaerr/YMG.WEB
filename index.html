@@ -20,30 +20,31 @@
   <title>YMBG</title>
   <style>
  #scrollToTop {
-  display: none; /* مخفي افتراضيًا */
+  display: none;
   position: fixed;
   bottom: 20px;
   right: 20px;
   z-index: 1000;
   background-color: #0ec9f2;
-  color: white;
+  color: black; /* لون السهم */
   border: none;
-  padding: 12px 16px;
+  padding: 10px 12px; /* حجم مضغوط */
   border-radius: 50%;
-  font-size: 24px;
+  font-size: 22px;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  transition: background-color 0.3s ease;
+  box-shadow: 0 0 15px #0ec9f2; /* توهج بنفس اللون */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 #scrollToTop:hover {
   background-color: #0aa4c3;
+  box-shadow: 0 0 20px #0aa4c3; /* توهج أقوى عند التحويم */
 }
 
 @media (max-width: 768px) {
   #scrollToTop {
-    padding: 10px 14px;
-    font-size: 20px;
+    padding: 8px 10px;
+    font-size: 18px;
   }
 }
  /* فلتر متكامل مع تحسيناتك */
