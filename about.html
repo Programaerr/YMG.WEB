@@ -29,27 +29,37 @@
       margin-bottom: 40px;
     }
 
+  .back-button {
+    display: inline-block;
+    background-color: #0ec9f2;
+    color: black;
+    padding: 24px 48px;
+    border: none;
+    border-radius: 12px;
+    font-size: 28px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    max-width: 100%;
+    width: auto;
+  }
+
+  .back-button:hover {
+    background-color: #0aa4c3;
+  }
+
+  .center {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  /* حجم خاص للهواتف */
+  @media (max-width: 768px) {
     .back-button {
-      display: inline-block;
-      background-color: #0ec9f2;
-      color: black;
-      padding: 90px 82px;
-      border: none;
-      border-radius: 8px;
-      font-size: 40px;
-      text-decoration: none;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
+      padding: 16px 32px;
+      font-size: 20px;
     }
-
-    .back-button:hover {
-      background-color: #0aa4c3;
-    }
-
-    .center {
-      text-align: center;
-      margin-top: 40px;
-    }
+  }
   </style>
 </head>
 <body>
